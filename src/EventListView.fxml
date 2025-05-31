@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.DropShadow?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="EventListControl">
+
+    <!-- Padding for spacing  -->
+    <padding>
+        <Insets topRightBottomLeft="20"/>
+    </padding>
+
+    <!-- EventListView Title -->
+    <Label text="Event List" style="-fx-font-size:20px;"/>
+
+    <!-- Gradient using a gray/blue color-->
+    <ListView fx:id="eventListView"
+                 style ="
+                -fx-background-color: linear-gradient(to bottom, #cfd9df, #e2ebf0);
+                -fx-border-color: grey;
+                -fx-border-width: 2;
+                -fx-background-radius: 10;
+                -fx-border-radius: 10;
+                -fx-padding: 5;">
+        <!-- Shadow -->
+        <effect>
+            <DropShadow color="grey" spread="0.2"/>
+        </effect>
+
+    </ListView>
+
+    <!--To map a button to an action-->
+    <Button text="Add New Event" onAction="#handleAddEvent"/>
+
+</VBox>

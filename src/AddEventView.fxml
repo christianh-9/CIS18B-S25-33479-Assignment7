@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="AddEventControl">
+
+    <!-- Padding for spacing -->
+    <padding>
+        <Insets topRightBottomLeft="15"/>
+    </padding>
+
+    <!--AddEventView Title -->
+    <Label text="Add New Event" style="-fx-font-size: 20px;"/>
+
+    <!-- Text box for each input -->
+    <Label text="Title:"/>
+    <TextField fx:id="titleField"/>
+
+    <Label text="Date:"/>
+    <DatePicker fx:id="datePicker"/>
+
+    <Label text="Time:"/>
+    <TextField fx:id="timeField"/>
+
+    <Label text="Description:"/>
+    <TextArea fx:id="descriptionArea" prefRowCount="3"/>
+
+    <!-- Map both buttons to actions -->
+    <Button text="Save Event" onAction="#handleSaveEvent"/>
+    <Button text="Back to Event List" onAction="#handleBackToList"/>
+
+</VBox>
